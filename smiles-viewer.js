@@ -1,6 +1,4 @@
-// https://github.com/reymond-group/smilesDrawer
-
-drawer = null
+var drawer = null
 
 function onresize() {
   const wrapper = document.getElementById('wrapper')
@@ -24,22 +22,21 @@ function onsubmit(redraw) {
   })
 }
 
-window.onload = function() {
-  window.addEventListener('resize', function(event) {
-    onresize()
-  })
 
-  document.getElementById('form').addEventListener('submit', function(event) {
-    event.stopPropagation()
-    event.preventDefault()
-    onsubmit(true)
-  })
-
-  document.getElementById('smiles').addEventListener('keyup', function(event) {
-    const auto = document.getElementById('auto')
-    onsubmit(auto.checked)
-  })
-
+window.addEventListener('resize', function(event) {
   onresize()
+})
+
+document.getElementById('form').addEventListener('submit', function(event) {
+  event.stopPropagation()
+  event.preventDefault()
   onsubmit(true)
-}
+})
+
+document.getElementById('smiles').addEventListener('keyup', function(event) {
+  const auto = document.getElementById('auto')
+  onsubmit(auto.checked)
+})
+
+onresize()
+onsubmit(true)
