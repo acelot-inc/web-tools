@@ -1,0 +1,67 @@
+form {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3rem;
+
+  background-color: #222222;
+
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  gap: 0.5rem;
+}
+
+form > input,
+form > label,
+form > button {
+  box-sizing: border-box;
+
+  border-style: none;
+  border-radius: 6px;
+  height: 2rem;
+  line-height: 2rem;
+
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 100%;
+
+  padding: 0 6px;
+}
+
+form > input {
+  flex: 1;
+}
+
+form input.invalid {
+  background-color: #ffcccc;
+}
+
+form > label,
+form > button {
+  background-color: #eeeeee;
+  color: #222222;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+/*form > label:hover,*/
+form > button:hover {
+  background-color: #ffffff;
+}
+
+#wrapper {
+  position: fixed;
+
+  top: 3rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#wrapper canvas {
+  width:  100%;
+  height: 100%;
+}

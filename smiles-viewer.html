@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="smiles-viewer.css" />
+    <script type="text/javascript" src="smiles-drawer-1.2.0.min.js"></script>
+    <title>SMILES Viewer</title>
+  </head>
+  <body>
+    <form id="form">
+      <input id="smiles" value="CN1C=NC2=C1C(=O)N(C(=O)N2C)C" placeholder="smiles string" autocomplete="off" autofocus required />
+      <label><input id="auto" type="checkbox" checked="checked" />Auto</label>
+      <button type="submit">Draw It!</button>
+    </form>
+    <div id="wrapper">
+      <canvas id="canvas" />
+    </div>
+    <script type="text/javascript" src="smiles-viewer.js"></script>
+  </body>
+</html>
