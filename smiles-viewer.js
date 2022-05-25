@@ -41,5 +41,5 @@ window.onload = function() {
   })
 
   onresize()
-  onsubmit()
+  onsubmit(true)
 }
