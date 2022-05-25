@@ -3,7 +3,7 @@
 ## SMILES Viewer
 
 Type a SIMLES string and see the molecular structure.\
-<https://acelot-inc.github.com/web-tools/smiles-viewer.html>
+<https://acelot-inc.github.io/web-tools/smiles-viewer.html>
 
 
 ## External Libraries
