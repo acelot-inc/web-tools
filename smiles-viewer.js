@@ -4,7 +4,8 @@ function onresize() {
   const wrapper = document.getElementById('wrapper')
   drawer = new SmilesDrawer.Drawer({
     width:  wrapper.offsetWidth,
-    height: wrapper.offsetHeight
+    height: wrapper.offsetHeight,
+    compactDrawing: false
   })
 }
 
