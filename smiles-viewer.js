@@ -23,6 +23,12 @@ function onsubmit(redraw) {
   })
 }
 
+const url = new URL(window.location.href)
+const mol = url.searchParams.get('mol')
+if(mol) {
+  const input = document.getElementById('smiles')
+  input.value = mol
+}
 
 window.addEventListener('resize', function(event) {
   onresize()
