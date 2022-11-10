@@ -1,0 +1,151 @@
+form {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3rem;
+
+  background-color: #222222;
+
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  gap: 0.5rem;
+}
+
+form > input,
+form > label,
+form > button {
+  box-sizing: border-box;
+
+  border-style: none;
+  border-radius: 6px;
+  height: 2rem;
+  line-height: 2rem;
+
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 100%;
+
+  padding: 0 6px;
+}
+
+form > input {
+  flex: 1;
+}
+
+input.invalid {
+  background-color: #ffcccc;
+}
+
+form > label,
+form > button {
+  background-color: #eeeeee;
+  color: #222222;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+form > button:hover {
+  background-color: #ffffff;
+}
+
+#recto {
+  position: fixed;
+  background-color: #ffffff;
+
+  top: 3rem;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+}
+
+#recto canvas {
+  width:  100%;
+  height: 100%;
+}
+
+#verso {
+  position: fixed;
+  background-color: #eeeeee;
+
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.vertical > #verso {
+  top: 3rem;
+  left: 0;
+  right: 50%;
+  bottom: 0;
+}
+
+.vertical > #recto {
+  top: 3rem;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+}
+
+#verso table {
+  width: 100%;
+}
+
+#verso table img {
+  cursor: pointer;
+  width: 16px;
+}
+
+#verso input {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#template {
+  display: none;
+}
+
+#data {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 3rem;
+
+  overflow-y: scroll;
+}
+
+#buttons {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 3rem;
+  line-height: 3rem;
+  text-align: right;
+  padding: 0 0.5rem;
+}
+
+#buttons a {
+  background-color: #222222;
+  border-radius: 0.5rem;
+  color:  #ffffff;
+
+  height: 2rem;
+  line-height: 2rem;
+  display: inline-block;
+  padding: 0 1rem;
+
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+#buttons a:hover {
+  background-color: #444444;
+}

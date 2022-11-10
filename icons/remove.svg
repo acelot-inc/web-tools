@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="-105 -105 210 210" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    line {
+      stroke-width: 50;
+    }
+  </style>
+
+  <line stroke="#000000" stroke-width="50" x1="-57" y1="-57" x2="+57" y2="+57" />
+  <line stroke="#000000" stroke-width="50" x1="-57" y1="+57" x2="+57" y2="-57" />
+</svg>

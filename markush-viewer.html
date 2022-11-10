@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="markush-viewer.css" />
+    <script type="text/javascript" src="smiles-drawer-acelot.min.js"></script>
+    <script type="text/javascript" src="markush-viewer.js" defer></script>
+    <title>Markush Viewer</title>
+  </head>
+  <body class="vertical">
+    <form id="form">
+      <input id="smiles" value="O=C1C2=C(N[R:1])SC([R:2])=C2C([R:3])=NN([R:4])1" placeholder="smiles string" autocomplete="off" autofocus required />
+      <label for="horizontal">
+        <input id="horizontal" name="layout" type="radio" checked="checked" />
+        Horizontal
+      </label>
+      <label for="vertical">
+        <input id="vertical" name="layout" type="radio" />
+        Vertical
+      </label>
+    </form>
+    <div id="verso">
+      <div id="data">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th data-label="[R:1]">R<sub>1</sub></th>
+              <th data-label="[R:2]">R<sub>2</sub></th>
+              <th data-label="[R:3]">R<sub>3</sub></th>
+              <th data-label="[R:4]">R<sub>4</sub></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="replacements">
+            <tr>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><img class="copy"   src="icons/copy.svg"   title="Copy" /></td>
+              <td><img class="remove" src="icons/remove.svg" title="Remove" /></td>
+            </tr>
+            <tr>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><img class="copy"   src="icons/copy.svg"   title="Copy" /></td>
+              <td><img class="remove" src="icons/remove.svg" title="Remove" /></td>
+            </tr>
+            <tr>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><img class="copy"   src="icons/copy.svg"   title="Copy" /></td>
+              <td><img class="remove" src="icons/remove.svg" title="Remove" /></td>
+            </tr>
+            <tr>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><img class="copy"   src="icons/copy.svg"   title="Copy" /></td>
+              <td><img class="remove" src="icons/remove.svg" title="Remove" /></td>
+            </tr>
+            <tr id="template">
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><input type="text" /></td>
+              <td><img class="copy"   src="icons/copy.svg"   title="Copy" /></td>
+              <td><img class="remove" src="icons/remove.svg" title="Remove" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="buttons">
+        <a href="#add-line">Add Line</a>
+        <a href="#download" download="molecules.smi">Download</a>
+      </div>
+    </div>
+    <div id="recto">
+      <canvas id="canvas" />
+    </div>
+  </body>
+</html>
