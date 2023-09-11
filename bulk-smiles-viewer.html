@@ -14,7 +14,8 @@
           <option value="large">Large View</option>
           <option value="small">Small View</option>
         </select>
-        <button id="update">Enter Data</button>
+        <button id="update">Edit Data</button>
+        <button class="upload">Upload...</button>
       </div>
       <h1>Bulk SMILES Viewer</h1>
     </header>
@@ -27,12 +28,15 @@ Cn1cnc2c1c(=O)[nH]c(=O)n2C Theobromine
 [Cl]C(=O)[Cl] Phosgene
 c1ccccc1C Toluene
 CC1(CCC[C@]2([C@H]1CC[C@@]3([C@@H]2CCO3)C)C)C Ambroxide
-c1[nH]c2ccccc2c1C[C@H](N)C(=O)O Tryptophan</textarea>
+c1[nH]c2ccccc2c1C[C@H](N)C(=O)O Tryptophan
+</textarea>
         <div id="buttons">
           <button id="cancel" style="display:none">Cancel</button>
-          <button id="draw">Draw!</button>
+          <button class="upload">From File...</button>
+          <button id="draw" class="main">Draw!</button>
         </div>
       </div>
     </div>
+    <input id="file-input" type="file" accept="chemical/x-daylight-smiles,.smi" style="opacity:0" />
   </body>
 </html>

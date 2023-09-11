@@ -57,11 +57,15 @@
     })
   }
 
-  document.getElementById('draw').addEventListener('click', event => {
+  function render() {
     clearImages()
     addImages(getMols())
     cancel.style.display = 'inline-block'
     screen.style.display = 'none'
+  }
+
+  document.getElementById('draw').addEventListener('click', event => {
+    render()
   })
 
   document.getElementById('cancel').addEventListener('click', event => {
@@ -105,6 +109,31 @@
     content.classList.remove('large')
     content.classList.remove('small')
     content.classList.add(event.target.value)
+  })
+
+  const files = document.getElementById('file-input')
+  files.addEventListener('change', event => {
+    const file = event.target.files[0]
+    if(!file) return
+
+    const reader = new FileReader()
+    reader.readAsText(file, 'UTF-8')
+    reader.onload  = e => {
+      const data = document.getElementById('data')
+      data.value = e.target.result
+
+      if(screen.style.display === 'none') {
+        render()
+      }
+    }
+    reader.onerror = e => {
+      console.warn(e.target.error)
+      alert('There was an error reading the file.')
+    }
+  })
+
+  document.querySelectorAll('button.upload').forEach(button => {
+    button.addEventListener('click', event => {files.click()})
   })
 
   scale.dispatchEvent(new Event('change'))
