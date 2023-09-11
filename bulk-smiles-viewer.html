@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="bulk-smiles-viewer.css" />
+    <script type="text/javascript" src="smiles-drawer-acelot.min.js"></script>
+    <script type="text/javascript" src="bulk-smiles-viewer.js" defer></script>
+    <title>Bulk SMILES Viewer</title>
+  </head>
+  <body>
+    <header>
+      <div id="controls">
+        <select id="scale">
+          <option value="large">Large View</option>
+          <option value="small">Small View</option>
+        </select>
+        <button id="update">Enter Data</button>
+      </div>
+      <h1>Bulk SMILES Viewer</h1>
+    </header>
+    <content></content>
+    <div id="screen">
+      <div id="popup">
+        <textarea id="data">CN1C=NC2=C1C(=O)N(C(=O)N2C)C Caffeine
+c1ncccc1[C@@H]2CCCN2C Nicotine
+Cn1cnc2c1c(=O)[nH]c(=O)n2C Theobromine
+[Cl]C(=O)[Cl] Phosgene
+c1ccccc1C Toluene
+CC1(CCC[C@]2([C@H]1CC[C@@]3([C@@H]2CCO3)C)C)C Ambroxide
+c1[nH]c2ccccc2c1C[C@H](N)C(=O)O Tryptophan</textarea>
+        <div id="buttons">
+          <button id="cancel" style="display:none">Cancel</button>
+          <button id="draw">Draw!</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
