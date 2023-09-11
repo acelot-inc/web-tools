@@ -90,7 +90,7 @@ content > div span {
   font-family: sans-serif;
   text-overflow: ellipsis;
   /*white-space: nowrap;*/
-  /*overflow: hidden;*/
+  overflow: hidden;
 
   max-width: 250px;
   line-height: 20pt;
