@@ -12,10 +12,7 @@
     const input = document.getElementById('data')
     const lines = input.value.split('\n')
     return lines.map(line => {
-      let i = line.indexOf(' ')
-      if(i === -1) {
-        i =line.indexOf('\t')
-      }
+      const i = line.search(/\s/)
       if(i === -1) {
         return [line]
       }

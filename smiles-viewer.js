@@ -10,15 +10,21 @@ function onresize() {
 }
 
 function onsubmit(redraw) {
-  const smiles = document.getElementById('smiles')
+  const input  = document.getElementById('smiles')
+  let   smiles = input.value
+  const index  = smiles.search(/\s/)
+  if(index !== -1) {
+    // TODO: Warn about the truncation?
+    smiles = smiles.substring(0, index)
+  }
 
-  SmilesDrawer.parse(smiles.value, function(tree) {
-    smiles.classList.remove('invalid')
+  SmilesDrawer.parse(smiles, function(tree) {
+    input.classList.remove('invalid')
     if(redraw) {
       drawer.draw(tree, 'canvas', 'light')
     }
   }, function(error) {
-    smiles.classList.add('invalid')
+    input.classList.add('invalid')
     console.log(error)
   })
 }
