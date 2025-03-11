@@ -84,26 +84,26 @@ content.small > div canvas {
   height: 100px;
 }
 
-content > div span {
+content > div .label {
   cursor: pointer;
-  display: inline-block;
+  display: block;
   font-family: sans-serif;
   text-overflow: ellipsis;
   /*white-space: nowrap;*/
   overflow: hidden;
 
   max-width: 250px;
-  line-height: 20pt;
+  line-height: 24pt;
   font-size: 12pt;
 }
 
-content.small > div span {
+content.small > div .label {
   max-width: 125px;
-  line-height: 10pt;
+  line-height: 12pt;
   font-size: 8pt;
 }
 
-content > div span:hover {
+content > div .label:hover {
   text-decoration: underline;
 }
 

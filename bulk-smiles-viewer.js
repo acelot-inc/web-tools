@@ -43,11 +43,12 @@
 
       const div = document.createElement('div')
       const cvs = document.createElement('canvas')
-      const lbl = document.createElement('span')
+      const lbl = document.createElement('div')
 
       lbl.setAttribute('title', 'Copy SMILES')
       lbl.innerText = mol[1] || ('Mol' + (i + 1))
       lbl.dataset.smiles = mol[0]
+      lbl.classList.add('label')
 
       div.appendChild(cvs)
       div.appendChild(lbl)
