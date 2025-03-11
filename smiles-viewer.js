@@ -11,11 +11,19 @@ function onresize() {
 
 function onsubmit(redraw) {
   const input  = document.getElementById('smiles')
-  let   smiles = input.value
+  let   smiles = input.value.trim()
   const index  = smiles.search(/\s/)
   if(index !== -1) {
     // TODO: Warn about the truncation?
     smiles = smiles.substring(0, index)
+  }
+
+  if(smiles === '') {
+    // Bail out to avoid showing parse errors:
+    const context = document.getElementById('canvas').getContext('2d')
+    context.clearRect(0, 0, context.canvas.width, context.canvas.height)
+    input.classList.remove('invalid')
+    return
   }
 
   SmilesDrawer.parse(smiles, function(tree) {
